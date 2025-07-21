@@ -14,8 +14,7 @@
 
 为了处理复杂的并发交互，我将系统解耦为几个核心的、独立运行的线程角色，它们通过线程安全的共享队列进行通信。
 
-![Architecture Diagram](link_to_your_architecture_diagram.png) 
-*(强烈建议：在这里放一张简单的架构图，展示各个线程和队列之间的关系)*
+<img width="1701" height="690" alt="image" src="https://github.com/user-attachments/assets/9ec384c4-b33b-4909-9f2d-60a0ed6374d6" />
 
 *   **`PassengerFactory` 线程 (生产者):**
     *   作为系统的**唯一输入源**，它负责实时解析外部请求（包括乘客请求、调度指令、双梯联动指令），并将它们封装成对象后，放入对应的共享队列中。
